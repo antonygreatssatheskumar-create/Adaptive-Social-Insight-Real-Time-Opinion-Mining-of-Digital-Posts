@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #03020a;
+  --surface:      #08071a;
+  --glass:        rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.09);
+  --cyan:         #00f5ff;
+  --gold:         #ffd700;
+  --magenta:      #ff2d78;
+  --green:        #00ff88;
+  --text:         #f0eeff;
+  --muted:        #6b6888;
+  --positive:     #00ff88;
+  --negative:     #ff2d78;
+  --neutral:      #ffd700;
+  --sarcasm:      #ff2d78;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* ── Custom cursor ── */
+#cursor { position:fixed; top:0; left:0; z-index:9999; pointer-events:none; mix-blend-mode:difference; }
+#cursor-dot  { width:8px; height:8px; background:#fff; border-radius:50%; position:absolute; transform:translate(-50%,-50%); transition:width .2s,height .2s,background .2s; }
+#cursor-ring { width:36px; height:36px; border:1.5px solid rgba(255,255,255,0.5); border-radius:50%; position:absolute; transform:translate(-50%,-50%); transition:all .12s cubic-bezier(0.16,1,0.3,1); }
+
+::-webkit-scrollbar { width:3px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:var(--cyan); border-radius:99px; }
+::selection { background:var(--cyan); color:#000; }
+
+body::after {
+  content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background: radial-gradient(ellipse 80% 50% at 20% 20%, #00f5ff08 0%, transparent 60%),
+              radial-gradient(ellipse 60% 60% at 80% 80%, #ff2d7808 0%, transparent 60%),
+              radial-gradient(ellipse 50% 40% at 50% 50%, #ffd70005 0%, transparent 70%);
+}
+
+#root { position:relative; z-index:1; }
+
+@keyframes fadeUp    { from{opacity:0;transform:translateY(32px);}  to{opacity:1;transform:translateY(0);} }
+@keyframes fadeIn    { from{opacity:0;}                              to{opacity:1;} }
+@keyframes float     { 0%,100%{transform:translateY(0) rotate(0deg);} 50%{transform:translateY(-20px) rotate(4deg);} }
+@keyframes orb1      { 0%,100%{transform:translate(0,0) scale(1);}   50%{transform:translate(80px,-60px) scale(1.15);} }
+@keyframes orb2      { 0%,100%{transform:translate(0,0) scale(1);}   50%{transform:translate(-70px,40px) scale(1.1);} }
+@keyframes orb3      { 0%,100%{transform:translate(0,0) scale(1);}   50%{transform:translate(40px,80px) scale(0.9);} }
+@keyframes pulse     { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+@keyframes spin      { to{transform:rotate(360deg);} }
+@keyframes shimmer   { 0%{background-position:-200% 0;} 100%{background-position:200% 0;} }
+@keyframes scanline  { 0%{top:-10%;} 100%{top:110%;} }
+@keyframes countUp   { from{opacity:0;transform:scale(0.4) translateY(10px);} to{opacity:1;transform:scale(1) translateY(0);} }
+@keyframes glowLine  { 0%,100%{opacity:0.5;} 50%{opacity:1;} }
+@keyframes ripple    { to{transform:scale(4);opacity:0;} }
+@keyframes slideInLeft { from{opacity:0;transform:translateX(-24px);} to{opacity:1;transform:translateX(0);} }
