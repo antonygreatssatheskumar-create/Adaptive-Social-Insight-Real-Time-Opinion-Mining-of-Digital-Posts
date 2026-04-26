@@ -4,7 +4,8 @@
 A web-based application that analyzes user-generated content and classifies sentiment in real time. The system supports multilingual input, sarcasm-aware predictions, and basic image-based opinion analysis, integrated into an interactive web interface.
 
 ---
-
+![image src](https://github.com/antonygreatssatheskumar-create/Adaptive-Social-Insight-Real-Time-Opinion-Mining-of-Digital-Posts/blob/94a8715b72fcd1e2b84963251350ecded7388137/frontend/WhatsApp%20Image%202026-03-16%20at%207.17.36%20PM.jpeg)
+![image src](https://github.com/antonygreatssatheskumar-create/Adaptive-Social-Insight-Real-Time-Opinion-Mining-of-Digital-Posts/blob/94a8715b72fcd1e2b84963251350ecded7388137/frontend/WhatsApp%20Image%202026-03-16%20at%207.17.36%20.jpeg)
 ## 🚀 Features
 
 - 💬 **Text-Based Sentiment Analysis**
