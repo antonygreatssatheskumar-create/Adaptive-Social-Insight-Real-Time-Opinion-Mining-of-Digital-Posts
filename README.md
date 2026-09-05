@@ -43,10 +43,3 @@ A web-based application that analyzes user-generated content and classifies sent
 - Machine Learning Model (pre-trained)  
 
 ---
-_Add screenshots here (recommended):_
-- Text input interface  
-- Sentiment result output  
-- Image input analysis  
-- Full application UI  
-
----
